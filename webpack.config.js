@@ -6,10 +6,10 @@ module.exports = {
     index: './src/build_files/index.js',
   },
   output: {
-    path: __dirname,
+    path: __dirname + '/build',
     filename: '[name].js',
-    publicPath: process.env.EXPORTROUTE
   },
+  devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/build_files/index.html',
