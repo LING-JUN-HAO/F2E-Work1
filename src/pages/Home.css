@@ -1,0 +1,1615 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Mantou Sans';
+    /* 自訂字型名稱 */
+    src: url('../../static/MantouSans-Regular.ttf') format('truetype');
+    /* 字型檔案的路徑和格式 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+:root {
+    --Space-8: 8px;
+    --Space-12: 12px;
+    --Space-16: 16px;
+    --Space-24: 24px;
+    --Space-32: 32px;
+    --Space-40: 40px;
+    --Space-48: 48px;
+    --Space-64: 64px;
+    --Space-96: 96px;
+    --Primary: #DA7D4A;
+    --Text-Primary-700: #334155;
+    --Bg-2: #F7ECE1;
+    --Gradient: linear-gradient(to right, #E5793B, #FF4185) text;
+    --Gray-500: #64748B;
+    --Gray-100: #F1F5F9;
+    --Gray-200: #E2E8F0;
+    --Gray-50: #F8FAFC;
+}
+
+.Loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.Loading svg{
+    height: 220px !important;
+    width: 246px !important;
+}
+
+.headerContainer {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(2px);
+    padding: var(--Space-16) var(--Space-24);
+}
+
+.headerContainer nav {
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--Space-16);
+    padding: var(--Space-12) var(--Space-24);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.headerContainer ul {
+    display: flex;
+    gap: var(--Space-16);
+}
+
+.headerContainer ul li {
+    border-radius: var(--Space-8);
+    padding: var(--Space-8);
+}
+
+.headerContainer ul a {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-decoration: none;
+    color: var(--Text-Primary-700);
+}
+.headerContainer ul a:hover{
+    color: var(--Primary);
+}
+
+.headerContainer .ImageContainer {
+    display: flex;
+    align-items: center;
+    gap: var(--Space-8);
+    cursor: pointer;
+}
+
+.headerContainer .ImageContainer:hover {
+    opacity: 0.8;
+}
+
+.TitleText {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Primary);
+}
+
+.headerContainer .SocialSoftware {
+    display: flex;
+    gap: var(--Space-16);
+    align-items: center;
+}
+
+.headerContainer .SocialSoftware img {
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+.headerContainer .SocialSoftware img:hover {
+    opacity: 0.8;
+}
+
+/* Banner */
+
+.BannerContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 276px 0px 276px;
+    gap: var(--Space-8);
+}
+
+.BannerContainer .SocialSoftware{
+    display: none;
+    position: absolute;
+    bottom: 16px;
+    gap: var(--Space-16);
+    padding: var(--Space-8) var(--Space-40);
+    background-color: #FFFFFF;
+    border-radius: var(--Space-12);
+}
+
+.BannerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 0 var(--Space-16) 0;
+    gap: var(--Space-16);
+    width: max-content;
+}
+
+.BannerTitleText {
+    font-family: Mantou Sans;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 100.8px;
+    letter-spacing: 2px;
+    background: var(--Gradient);
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.BannerInfo {
+    display: flex;
+    justify-content: center;
+    gap: var(--Space-16);
+}
+
+.ElectionText {
+    display: flex;
+    gap: var(--Space-16);
+    border-radius: var(--Space-16);
+    padding: var(--Space-12) var(--Space-16);
+    background-color: var(--Text-Primary-700);
+    height: fit-content;
+}
+
+.ElectionText h4 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.BannerContainer .BannerImg {
+    width: 723px;
+    height: 537.18px;
+}
+
+/* Marquee */
+
+.MarqueeBox {
+    display: flex;
+    background-color: var(--Primary);
+    overflow: hidden;
+}
+
+.MarqueeBox ul {
+    display: flex;
+    gap: var(--Space-24);
+    padding: 10px;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+.MarqueeBox ul li {
+    font-family: 'Mantou Sans';
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 67.2px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Advocate */
+
+.AdvocateContainer {
+    background-color: #F7ECE1;
+    padding: 64px 104px;
+    display: flex;
+    justify-content: center;
+}
+
+.AdvocateBoxImgBox img {
+    border-radius: 0 var(--Space-24) var(--Space-24) 0;
+    height: 100%;
+    width: 100%;
+}
+
+.AdvocateContainer .AdvocateBox {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: var(--Space-64) 40px;
+    border-radius: var(--Space-24) 0 0 var(--Space-24);
+    max-width: 660px;
+    max-height: 464px;
+}
+
+.AdvocateBoxImgBox {
+    max-width: 660px;
+    max-height: 544px;
+    flex: 1;
+}
+
+.AdvocateContainer .AdvocateBox h4:nth-of-type(1) {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    color: var(--Text-Primary-700);
+    margin: var(--Space-32) 0;
+}
+
+.AdvocateContainer .AdvocateBox p:nth-of-type(1) {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--Text-Primary-700);
+}
+
+.AdvocateContainer .AdvocateImageContainer img {
+    height: 100%;
+    border-radius: 0 var(--Space-24) var(--Space-24) 0;
+}
+
+/* News */
+
+.NewsContainer {
+    border-radius: 0 96px;
+    padding: 64px 104px;
+}
+
+.NewsContainer .NewsBox {
+    display: flex;
+    justify-content: center;
+    gap: var(--Space-24);
+    padding-top: 64px;
+}
+
+.NewsContainer .SubNewsBox .CardContent p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.NewsContainer .MainNewsBox {
+    max-width: none;
+}
+
+.NewsContainer .SubNewsBox {
+    display: flex;
+    gap: var(--Space-16);
+    max-width: 648px;
+}
+
+.NewsContainer .MainNewsBox {
+    max-width: 648px;
+}
+
+.NewsContainer .MainNewsBox img,
+.NewsContainer .SubNewsBox img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.NewsContainer .SubNewsBox img {
+    max-width: 201px;
+    max-height: 134px;
+}
+
+.NewsContainer .MainNewsBox img:hover,
+.NewsContainer .SubNewsBox img:hover {
+    transform: scale(1.1);
+}
+
+.NewsContainer .SubNewsBox:nth-child(2) {
+    margin: var(--Space-24) 0;
+}
+
+.NewsContainer .MainNewsBox .CardContent time {
+    display: inline-block;
+    margin-top: var(--Space-8);
+}
+
+.NewsContainer .CardImage {
+    overflow: hidden;
+    border-radius: var(--Space-16);
+    flex-shrink: 0;
+    width: fit-content;
+}
+
+.NewsContainer .CardContent h4:nth-child(2) {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+    margin: var(--Space-8) 0;
+}
+
+.NewsContainer .CardContent time {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--Gray-500);
+}
+
+.NewsContainer .CardContent p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+}
+
+.NewsContainer .more {
+    display: flex;
+    margin-top: var(--Space-24);
+    border-radius: 500px;
+    padding: var(--Space-16) var(--Space-24);
+    background-color: var(--Gray-100);
+    width: fit-content;
+    cursor: pointer;
+}
+
+.NewsContainer .more span {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: var(--Text-Primary-700);
+    margin-right: var(--Space-8);
+}
+
+.NewsContainer .more img {
+    height: 20px;
+}
+
+/* ArticleTitle */
+
+.ArticleTitleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ArticleTitleBox .ArticleMark {
+    border-radius: var(--Space-8);
+    padding: var(--Space-8) var(--Space-12);
+    background-color: var(--Text-Primary-700);
+    width: fit-content;
+}
+
+.ArticleTitleBox .ArticleMark span {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.AdvocateBox .Mark {
+    color: var(--Primary);
+}
+
+/* PolicyBox */
+
+.PolicyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 104px;
+}
+
+.PolicyBox {
+    display: flex;
+    justify-content: flex-start;
+    gap: 64px;
+    margin-top: 64px;
+}
+
+.PolicyBox h4 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Text-Primary-700);
+    overflow: hidden;
+}
+
+.PolicyCard {
+    cursor: pointer;
+}
+
+.PolicyCardTitle {
+    padding: 0 16px 16px 16px;
+}
+
+/* DonateBox */
+
+.DonateAndServiceMailBox {
+    display: flex;
+    justify-content: center;
+    gap: var(--Space-24);
+    padding: 64px 104px;
+}
+
+.DonateAndServiceMailBox .DonateBox,
+.DonateAndServiceMailBox .ServiceMailBox {
+    border-radius: var(--Space-32);
+    padding: 96px;
+    flex: 1;
+    max-width: 648px;
+}
+
+.DonateAndServiceMailBox .DonateBox h3:nth-child(1),
+.DonateAndServiceMailBox .ServiceMailBox h3:nth-child(1) {
+    font-family: Mantou Sans;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 75.3px;
+    color: #FFFFFF;
+}
+
+.DonateAndServiceMailBox .DonateBox h4:nth-child(2),
+.DonateAndServiceMailBox .ServiceMailBox h4:nth-child(2) {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24.2px;
+    color: #FFFFFF;
+}
+
+.DonateAndServiceMailBox .DonateBox {
+    background-color: var(--Primary);
+}
+
+.DonateAndServiceMailBox .ServiceMailBox {
+    background-color: var(--Text-Primary-700);
+}
+
+.DonateAndServiceMailBox .DonateBtnContainer,
+.DonateAndServiceMailBox .ServiceMailBtnContainer {
+    display: flex;
+    gap: var(--Space-8);
+    margin-top: 16px;
+}
+
+.DonateAndServiceMailBox .ServiceMaillBtnBox,
+.DonateAndServiceMailBox .DonateBtnBox {
+    flex: 1;
+    margin: auto;
+}
+
+.DonateAndServiceMailBox .DonateBtn,
+.DonateAndServiceMailBox .ServiceMailBtn {
+    width: fit-content;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    gap: var(--Space-8);
+    border-radius: 500px;
+    padding: var(--Space-16) var(--Space-24);
+    background-color: #FFFFFF;
+    color: var(--Text-Primary-700);
+    cursor: pointer;
+}
+
+.DonateAndServiceMailBox .DonateBtn p,
+.DonateAndServiceMailBox .ServiceMailBtn p {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+.DonateAndServiceMailBox .DonateBtn img,
+.DonateAndServiceMailBox .ServiceMailBtn img {
+    height: 20px;
+}
+
+/* LogoBox */
+
+.LogoBox {
+    padding: 64px 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--Space-16);
+}
+
+.ArticleTitleBox .LogoText,
+.LogoBox .LogoText {
+    font-family: 'Mantou Sans';
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 92.67px;
+    letter-spacing: 2px;
+    background: var(--Gradient);
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.BannerContainer .NameBox,
+.LogoBox .NameBox {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border-radius: var(--Space-8);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 12px 0px #A3B4CB33;
+    gap: var(--Space-16);
+    padding: var(--Space-12) var(--Space-16);
+}
+
+.BannerContainer .NameBox .Number,
+.LogoBox .NameBox .Number {
+    display: flex;
+    gap: 7.35px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #E5793B, #FF4185);
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-weight: 900;
+    color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.BannerContainer .NameBox h4,
+.LogoBox .NameBox p {
+    font-family: Inter;
+    font-weight: 700;
+    color: var(--Primary);
+    font-size: 40px;
+    line-height: 60px;
+}
+
+/* Footer */
+
+footer {
+    padding: var(--Space-64);
+    background-color: var(--Bg-2);
+}
+
+.FooterContainer {
+    display: flex;
+    margin: auto;
+    max-width: 1352px;
+}
+
+.FooterContainer .NameBox {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: var(--Space-8);
+}
+
+.FooterContainer .NameBox span {
+    font-size: 28px;
+    line-height: 42px;
+    font-family: Inter;
+    font-weight: 700;
+    color: var(--Primary);
+}
+
+.FooterContainer .Number {
+    display: flex;
+    gap: 7.35px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #E5793B, #FF4185);
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-weight: 900;
+    color: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    font-size: 20.48px;
+    line-height: 30.72px;
+}
+
+.SocialMediaInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.FooterContainer .SocialMediaBtn {
+    display: flex;
+    gap: var(--Space-8);
+}
+
+.SocialMediaItem {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.FooterContainer .SocialMediaBtn img {
+    position: relative;
+    display: block;
+    height: 28px;
+    width: 28px;
+    z-index: 1;
+}
+
+.SocialMediaItem::after {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    scale: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.SocialMediaItem:hover::after {
+    scale: 1;
+    opacity: 0.15;
+}
+
+.CopyRight {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--Text-Primary-700);
+}
+
+.ContactInfo {
+    flex: 1;
+}
+
+.ContactInfo h4:nth-child(1) {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Text-Primary-700);
+    padding-bottom: var(--Space-16);
+}
+
+.ContactInfo h5:nth-child(2) {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+}
+
+/* Modal */
+
+.ModalBackdropBox {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut .3s forwards;
+    /* 添加动画 */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.ModalContainer {
+    position: fixed;
+    width: 82%;
+    height: 86%;
+    max-height: 720px;
+    max-width: 1400px;
+    background-color: #FFFFFF;
+    border-radius: var(--Space-24);
+    padding: var(--Space-24);
+}
+
+.ModalContainer header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--Space-24);
+}
+
+.ModalContainer header span {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--Text-Primary-700);
+}
+
+.ModalContainer header img {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.ModalBox {
+    display: flex;
+    padding: 0 var(--Space-24);
+    gap: 32px;
+    height: calc(100% - 144px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ModalBox .ModalImageBox .NewsPhoto {
+    height: 318px;
+    width: 517px;
+    margin-bottom: 16px;
+}
+
+.ModalBox .ModalImageBox .PolicyPhoto {
+    height: 340px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.ShareText {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+}
+
+.ModalBox .ModalImageContentBox {
+    width: 100%;
+}
+
+
+.ModalBox .ModalImageContentBox .Share {
+    display: flex;
+    gap: var(--Space-16);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+    margin-top: 8px;
+}
+
+.ModalBox .SocialMediaItem img {
+    height: 32px;
+    width: 32px;
+}
+
+.ModalBox .ModalImageContentBox .CardTitle {
+    display: flex;
+    flex-direction: column;
+    gap: var(--Space-8);
+    width: max-content;
+}
+
+.ModalBox .ModalImageContentBox .CardTitle span {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--Primary);
+}
+
+.ModalBox .ModalImageContentBox .CardTitle time {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--Gray-500);
+}
+
+.ModalBox .ModalImageContentBox .CardContent {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+    padding: 24px 0px 76px 0px;
+}
+
+.MoreBox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--Space-16);
+    padding: var(--Space-16);
+    background-color: var(--Gray-50);
+}
+
+.MoreBoxTitle {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: var(--Text-Primary-700);
+}
+
+.MoreBox .MoreInfo {
+    display: flex;
+    gap: var(--Space-16);
+}
+
+.MoreBox .MoreInfo .ImageContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 244.33px;
+    gap: var(--Space-12);
+}
+
+.MoreBox .MoreInfo .ImageContainer img {
+    width: 100%;
+    height: 134px;
+}
+
+.MoreBox .MoreInfo p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+}
+
+.CardItemTBox:nth-child(2) {
+    margin: 24px 0;
+}
+
+.CardItemTBox h5 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--Text-Primary-700);
+}
+
+.CardItemTBox p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--Text-Primary-700);
+}
+
+
+/* ModalOther */
+
+.ModalDonateContent p:nth-child(1){
+    padding-top: var(--Space-16);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+}
+.ModalDonateContent p:nth-child(2){
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--Text-Primary-700);
+}
+.ModalOtherImageBox{
+    width: 50%;
+    padding: 60px;
+    border-radius: var(--Space-24);
+    height: fit-content;
+}
+.ModalDonateBox .ModalOtherImageBox{
+    background-color: var(--Bg-2);
+}
+.ModalServiceMailBox .ModalImageContentBox,
+.ModalDonateBox .CardTitle {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 60px;
+}
+.ModalDonateBox .CardTitle{
+    color: var(--Primary);
+}
+.ModalServiceMailBox .CardTitle{
+    color: var(--Text-Primary-700)
+}
+.ModalServiceMailBox .ModalOtherImageBox{
+    background-color: #E3F8FF;
+}
+.ModalDonateContent{
+    display: flex;
+    flex-direction: column;
+    gap: var(--Space-16);
+    width: 50%;
+}
+.ModalDonateContent h6{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--Text-Primary-700);
+    padding-bottom: var(--Space-16);
+}
+.ModalDonateItem{
+    border-radius: var(--Space-16);
+    border: 2px solid var(--Gray-200);
+    padding: var(--Space-24) var(--Space-16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.ModalDonateItem:hover{
+    border: 2px solid var(--Primary);
+}
+.ModalDonateItem.selected {
+    border: 2px solid var(--Primary);
+  }
+.ModalDonateItem + .ModalDonateItem{
+    margin-top: var(--Space-16);
+}
+.ModalDonateImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.ModalDonateImage img{
+    max-width: 100%;
+}
+
+.ModalDonateItemTitle{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--Primary);
+}
+.DollarBox{
+    padding-right: var(--Space-8);
+}
+.Dollar{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Text-Primary-700);
+}
+.DollarNum{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Text-Primary-700);
+}
+.Sponsor{
+    display: inline-block;
+    text-align: right;
+    width: 140px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--Gray-500);
+}
+.CustomizeItem{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.InputBox{
+    margin-top: var(--Space-8);
+    width: calc(100% - 30px);
+    background-color: var(--Gray-100);
+    display: flex;
+    align-items: center;
+    padding: var(--Space-16) 15px;
+    border-radius: var(--Space-8);
+}
+.CustomizeItem input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    margin-left: var(--Space-8);
+}
+.ModalOtherDonateBtn{
+    margin-top: var(--Space-16);
+    padding: var(--Space-24) var(--Space-32);
+    background-color: var(--Primary);
+    border-radius: 550px;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.ModalOtherDonateBtn:hover{
+    opacity: .8;
+}
+.ModalCompleteBox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-32);
+}
+.ModalCompleteBox p {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    color: var(--Text-Primary-700);
+}
+.ModalCompleteBox .close{
+    padding: var(--Space-16) var(--Space-96);
+    background-color: var(--Gray-100);
+    border-radius: 500px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: var(--Text-Primary-700);
+    cursor: pointer;
+}
+.ModaoOtherImageTitle{
+    color: var(--Text-Primary-700);
+}
+.ServiceMailItem{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--Text-Primary-700);
+    margin: 10px 0;
+}
+.ServiceMailBox textarea,
+.ServiceMailBox input{
+    outline: none;
+    border: none;
+    border-radius: var(--Space-8);
+    padding: var(--Space-16) 15px;
+    background-color: var(--Gray-100);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--Gray-500);
+    width: calc(100% - 40px);
+    resize: none;
+}
+
+/* NavBottom */
+
+.NavBottomBox{
+    position: sticky;
+    bottom: 0;
+}
+.NavBottom {
+    display: none;
+    padding: 0 var(--Space-8);
+    gap: 8px;
+    color: var(--Gray-50);
+    background: rgba(255, 255, 255, 0.9);
+}
+.NavBottom li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: var(--Space-12) 4px var(--Space-16) 4px;
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+}
+.NavBottom li:hover{
+    opacity: 0.8;
+}
+
+.NavBottom li img {
+    height: 24px;
+    width: 24px;
+}
+
+.NavBottom li a {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12.1px;
+    color: var(--Text-Primary-700);
+    text-decoration: none;
+}
+
+/* Media */
+@media screen and (max-width: 1281px) {
+    .headerContainer ul {
+        display: none;
+    }
+
+    /* Banner */
+    .BannerTitleText {
+        font-family: Mantou Sans;
+        font-size: 52px;
+        line-height: 54.6px;
+        width: 270px;
+    }
+
+    .ElectionText h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .BannerContainer .NameBox h4 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .BannerContainer .NameBox .Number {
+        font-size: 25.49px;
+        line-height: 38.24px;
+        height: 39.83px;
+        width: 39.83px;
+    }
+
+    .BannerContainer .BannerImg {
+        height: 254.82px;
+        width: 343px;
+    }
+
+    /* Marquee */
+
+    .MarqueeBox ul li {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    /* Advocate */
+
+    .AdvocateContainer {
+        padding: 64px 36px;
+        flex-direction: column;
+    }
+
+    .AdvocateBoxImgBox img {
+        border-radius: 0 0 var(--Space-24) var(--Space-24);
+    }
+
+    .ArticleTitleBox .LogoText {
+        font-size: 52px;
+        line-height: 75.3px;
+    }
+
+    .AdvocateContainer .AdvocateBox {
+        max-width: none;
+        max-height: none;
+        border-radius: var(--Space-24) var(--Space-24) 0 0;
+    }
+
+    .AdvocateBoxImgBox {
+        max-width: none;
+        max-height: none;
+    }
+
+    .AdvocateContainer .AdvocateBox h4:nth-of-type(1) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .AdvocateContainer .AdvocateBox p:nth-of-type(1) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /* News */
+
+    .NewsContainer {
+        padding: 64px 36px;
+    }
+
+    .NewsContainer .NewsBox {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    .NewsContainer .MainNewsBox .MainCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .NewsContainer .CardContent h4:nth-child(2) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .NewsContainer .MainNewsBox {
+        max-width: none;
+    }
+
+    .NewsContainer .SubNewsBox {
+        max-width: none;
+    }
+
+    .NewsContainer .SubNewsBox .CardImage {
+        max-width: 109px;
+    }
+
+    /* Policy */
+
+    .PolicyContainer {
+        padding: 64px 36px;
+    }
+
+    .PolicyBox {
+        margin-top: 40px;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .PolicyCard img {
+        width: 336px;
+        height: 235px;
+    }
+
+    /* DonateBox */
+
+    .DonateAndServiceMailBox {
+        padding: 64px 36px;
+    }
+
+    .DonateAndServiceMailBox .OtherIcon {
+        height: 106px;
+        width: 100%;
+    }
+
+    .DonateAndServiceMailBox .ServiceMailBox h3:nth-child(1),
+    .DonateAndServiceMailBox .DonateBox h3:nth-child(1) {
+        font-size: 40px;
+        line-height: 57.92px;
+    }
+
+    .DonateAndServiceMailBox .ServiceMailBox,
+    .DonateAndServiceMailBox .DonateBox {
+        padding: 40px 24px;
+    }
+
+    .DonateAndServiceMailBox .ServiceMaillBtnBox,
+    .DonateAndServiceMailBox .DonateBtnBox {
+        flex: 1;
+    }
+
+    .DonateAndServiceMailBox .ServiceMailBtnImg,
+    .DonateAndServiceMailBox .DonateBtnImg {
+        flex: 1;
+    }
+
+    /* LogoBox */
+
+    .LogoBox {
+        padding: 64px 32px;
+    }
+
+    .LogoBox .LogoText {
+        font-size: 52px;
+        line-height: 54.6px;
+        width: 270px;
+    }
+
+    .LogoBox .NameBox p {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .LogoBox .NameBox .Number {
+        width: 33px;
+        height: 33px;
+        font-size: 24.32px;
+        line-height: 36.48px;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 64px 32px;
+    }
+
+    .FooterContainer {
+        flex-direction: column;
+    }
+
+    .ContactInfo h4:nth-child(1) {
+        padding-top: 24px;
+    }
+
+    /* Modal */
+
+    .ModalBox {
+        align-items: center;
+        flex-direction: column;
+        padding: var(--Space-16);
+    }
+
+    .ModalContainer header img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .ModalContainer header span {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .ModalContainer header {
+        padding: var(--Space-16);
+    }
+    .ModalBox .ModalImageContentBox .CardTitle span {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .ModalBox .ModalImageBox {
+        width: 100%;
+    }
+
+    .ModalBox .ModalImageBox .NewsPhoto {
+        width: 100%;
+    }
+
+    .NewsContainer .MainNewsBox {
+        max-height: 100%;
+    }
+    .ModalDonateContent{
+        width: 100%;
+    }
+    .ModalServiceMailBox .ModalOtherImageBox,
+    .ModalDonateBox .ModalOtherImageBox{
+        width: fit-content;
+    }
+    
+
+    /* NavBottom */
+
+    .NavBottom {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 541px) {
+    .headerContainer {
+        position: static;
+        padding: 0;
+    }
+
+    .headerContainer nav {
+        padding: var(--Space-12) var(--Space-16);
+    }
+
+    .headerContainer .ImageContainer img {
+        width: 34px;
+        height: 28px;
+    }
+
+    .TitleText {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .headerContainer .SocialSoftware {
+        display: none;
+    }
+
+    /* Banner */
+    .BannerContainer {
+        padding: var(--Space-16) var(--Space-16) 0 var(--Space-16);
+    }
+    .BannerContainer .SocialSoftware{
+        display: flex;
+    }
+    .BannerInfo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .BannerBox {
+        padding: 0 0 var(--Space-16) 0;
+    }
+
+    .BannerContainer .BannerImg {
+        width: 327px;
+        height: 255px;
+    }
+
+    /* Advocate */
+
+    .AdvocateContainer {
+        padding: 64px 16px;
+    }
+
+    .AdvocateContainer .AdvocateBox {
+        max-width: none;
+        max-height: none;
+        padding: 40px 24px;
+    }
+
+    .AdvocateContainer .AdvocateBox p:nth-of-type(1) {
+        margin-bottom: var(--Space-32);
+    }
+
+    /* news */
+
+    .NewsContainer {
+        padding: 64px 16px;
+    }
+
+    .NewsContainer .MainNewsBox .MainCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .NewsContainer .CardContent h4:nth-child(2) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .NewsContainer .SubNewsBox {
+        max-width: none;
+    }
+
+    .NewsContainer .SubNewsBox .CardImage {
+        min-height: 127px;
+    }
+
+    /* Policy */
+
+    .PolicyBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 64px;
+    }
+
+    .PolicyContainer {
+        padding: 64px 16px;
+    }
+
+    .PolicyCard img {
+        height: 229px;
+    }
+
+    /* DonateBox */
+
+    .DonateAndServiceMailBox {
+        padding: 64px 16px;
+        flex-direction: column;
+    }
+
+    /* LogoBox */
+
+    .LogoBox {
+        padding: 104px 16px;
+    }
+
+    /* Modal */
+
+    .ModalBox {
+        /* padding: var(--Space-8) var(--Space-16) var(--Space-16) var(--Space-16); */
+        padding: 0;
+    }
+
+    .ModalContainer {
+        padding: var(--Space-16);
+    }
+
+    .ModalContainer header {
+        padding: var(--Space-16) 0;
+    }
+
+    .ModalBox .ModalImageBox .NewsPhoto {
+        height: 251px;
+    }
+
+    .CardItemTBox p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .ModalDonateBox .CardTitle{
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .ModalDonateContainer{
+        padding: var(--Space-8) var(--Space-16) var(--Space-16) var(--Space-16);
+    }
+    .ModalServiceMailBox .ModalImageContentBox,
+    .ModalDonateContent p:nth-child(1){
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .ModalServiceMailBox .ModalImageContentBox{
+        margin: auto;
+    }
+    .ModalServiceMailBox img{
+        width: 206.5px;
+    }
+    .ModalDonateContent p:nth-child(2){
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .ModalDonateContent{
+        width: 100%;
+    }
+    .ModalServiceMailBox .ModalOtherImageBox,
+    .ModalDonateBox .ModalOtherImageBox{
+        display: flex;
+        width: fit-content;
+        padding: var(--Space-16);
+        min-height: 120px;
+    }
+    .ModalDonateItem{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ModalCompleteBox .close{
+        padding: var(--Space-16) 60px;
+    }
+    .ModalCompleteBox{
+        width: 100%;
+    }
+    /* NavBottom */
+
+    .NavBottom {
+        display: flex;
+    }
+}
