@@ -14,8 +14,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/build_files/index.html',
       filename: 'index.html',
-      TITLE: process.env.TITLE,
-      ICON: process.env.ICON
+      favicon: './static/image/logo.png'
     }),
     new Dotenv(),
   ],
