@@ -1,4 +1,7 @@
-node_modules/
-build/
-.gitignore
+.env
+
 server.js
+
+node_modules
+
+.gitignore

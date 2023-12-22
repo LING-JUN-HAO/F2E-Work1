@@ -20,7 +20,6 @@ module.exports = {
     new Dotenv(),
   ],
   devServer: {
-    contentBase: './dist',
     historyApiFallback: true,
     open: true,             // 自動打開瀏覽器
     port: 5090,             // 設定伺服器的埠號
